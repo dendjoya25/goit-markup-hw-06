@@ -204,10 +204,7 @@ address {
 /* < !--=========== HERO STYLES ===========--> */
 .hero-first-section {
   background-color: #2e2f42;
-  max-width: 1440px;
-  min-height: 432px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-bottom: 72px;
   padding-top: 72px;
   background-repeat: no-repeat;
@@ -218,7 +215,16 @@ address {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/background-image.jpg);
+    url(../images/./hero-1x2x-images/mob-hero-img.jpg);
+}
+@media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero-first-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/./hero-1x2x-images/mob-hero-img@2x.jpg);
+  }
 }
 .page-title {
   max-width: 216px;
@@ -231,6 +237,7 @@ address {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 72px;
+
   text-align: center;
 }
 .button-icon {
@@ -252,6 +259,27 @@ address {
 }
 
 @media screen and (min-width: 768px) {
+  .hero-first-section {
+    padding: 112px 0;
+    min-width: 768px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/./hero-1x2x-images/tablet-hero-img.jpg);
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-first-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/./hero-1x2x-images/tablet-hero-img@2х.jpg);
+    }
+  }
+
   .page-title {
     max-width: 496px;
     font-size: 56px;
@@ -260,8 +288,103 @@ address {
   }
 }
 @media screen and (min-width: 1158px) {
+  .hero-first-section {
+    min-width: 1158px;
+    padding: 188px 15px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/./hero-1x2x-images/desktop-hero-img.jpg);
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-first-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/./hero-1x2x-images/desktop-hero-img@2x.jpg);
+    }
+  }
   .page-title {
     margin: 0 auto 48px auto;
+  }
+}
+/* < !--===========  SOFT SKILLS STYLES ===========--> */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.soft-list {
+  padding: 96px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+.soft-list-icon {
+  display: none;
+}
+.soft-list-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+.soft-list-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+@media screen and (min-width: 768px) {
+  .soft-list {
+    gap: 72px 24px;
+  }
+  .soft-list-item {
+    max-width: 356px;
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .soft-list-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+  }
+  .soft-list {
+    display: flex;
+    gap: 24px;
+  }
+  .soft-list-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .soft-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .soft-list-text {
+    font-weight: 400;
   }
 }
 
